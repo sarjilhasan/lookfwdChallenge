@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF Slapstick Comic Shaded.ttf">
+            <string>SFSlapstickComicShaded</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="rootViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="LookFwd_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cG6-sP-flp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8c-fG-89Y">
+                                        <rect key="frame" x="0.0" y="16" width="61" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="61" id="NzV-lY-T7U"/>
+                                        </constraints>
+                                        <state key="normal" image="googleSearch"/>
+                                        <connections>
+                                            <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ugf-GT-gN7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.79600694444444442" green="0.47227647569444442" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="C8c-fG-89Y" firstAttribute="bottom" secondItem="cG6-sP-flp" secondAttribute="bottomMargin" id="EVx-Zk-2Ne"/>
+                                    <constraint firstItem="C8c-fG-89Y" firstAttribute="top" secondItem="cG6-sP-flp" secondAttribute="top" constant="16" id="K7W-D5-A5f"/>
+                                    <constraint firstItem="C8c-fG-89Y" firstAttribute="centerX" secondItem="cG6-sP-flp" secondAttribute="centerX" constant="-176.5" id="UUp-js-UFf"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eD2-I1-7xD">
+                                <rect key="frame" x="2" y="64" width="244" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="244" id="1G8-zS-2Ff"/>
+                                    <constraint firstAttribute="height" constant="21" id="Ksf-Pw-gls"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFSlapstickComicShaded" family="SF Slapstick Comic Shaded" pointSize="28"/>
+                                <color key="textColor" red="0.79600694439999997" green="0.47227647569999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="i8i-Bt-grO">
+                                <rect key="frame" x="12" y="93" width="400" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="GJI-GP-NmT"/>
+                                </constraints>
+                                <color key="textColor" red="0.79600694439999997" green="0.47227647569999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5o-NW-gQn">
+                                <rect key="frame" x="2" y="228" width="334" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ArU-mY-qLI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFSlapstickComicShaded" family="SF Slapstick Comic Shaded" pointSize="25"/>
+                                <color key="textColor" red="0.79600694439999997" green="0.47227647569999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text=" " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2ml-Kz-5Gs">
+                                <rect key="frame" x="12" y="345" width="400" height="73"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="4cZ-EA-kQQ"/>
+                                </constraints>
+                                <color key="textColor" red="0.79600694439999997" green="0.47227647569999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXl-ny-jWl">
+                                <rect key="frame" x="2" y="316" width="334" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="W8k-f0-nZJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFSlapstickComicShaded" family="SF Slapstick Comic Shaded" pointSize="25"/>
+                                <color key="textColor" red="0.79600694439999997" green="0.47227647569999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Information:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcz-W7-CdX">
+                                <rect key="frame" x="2" y="442" width="338" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ODU-0z-3QZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFSlapstickComicShaded" family="SF Slapstick Comic Shaded" pointSize="24"/>
+                                <color key="textColor" red="0.79600694439999997" green="0.47227647569999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PII-2B-qDe">
+                                <rect key="frame" x="2" y="146" width="334" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9rs-aq-3fk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFSlapstickComicShaded" family="SF Slapstick Comic Shaded" pointSize="25"/>
+                                <color key="textColor" red="0.79600694439999997" green="0.47227647569999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text=" " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="173-9Q-xUp">
+                                <rect key="frame" x="12" y="175" width="400" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="gTu-te-6Qy"/>
+                                </constraints>
+                                <color key="textColor" red="0.79600694439999997" green="0.47227647569999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text=" " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jva-aS-xQz">
+                                <rect key="frame" x="14" y="257" width="400" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="HVQ-uK-ReA"/>
+                                </constraints>
+                                <color key="textColor" red="0.79600694439999997" green="0.47227647569999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text=" " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="129-bh-oBd">
+                                <rect key="frame" x="12" y="480" width="400" height="96"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.79600694439999997" green="0.47227647569999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bcz-W7-CdX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-18" id="4hz-9d-dyE"/>
+                            <constraint firstItem="i8i-Bt-grO" firstAttribute="top" secondItem="eD2-I1-7xD" secondAttribute="bottom" constant="8" symbolic="YES" id="50N-fK-3JA"/>
+                            <constraint firstItem="Jva-aS-xQz" firstAttribute="trailing" secondItem="129-bh-oBd" secondAttribute="trailing" constant="2" id="7qj-AM-Hpi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="129-bh-oBd" secondAttribute="bottom" constant="160" id="Bd2-q4-Yeq"/>
+                            <constraint firstItem="173-9Q-xUp" firstAttribute="trailing" secondItem="2ml-Kz-5Gs" secondAttribute="trailing" id="GjH-gL-TDV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i8i-Bt-grO" secondAttribute="trailing" constant="-18" id="HMP-Qx-cFW"/>
+                            <constraint firstItem="iXl-ny-jWl" firstAttribute="trailing" secondItem="bcz-W7-CdX" secondAttribute="trailing" constant="-4" id="Ide-nq-Ylr"/>
+                            <constraint firstItem="bcz-W7-CdX" firstAttribute="top" secondItem="2ml-Kz-5Gs" secondAttribute="bottom" constant="24" id="JFO-rd-69k"/>
+                            <constraint firstItem="eD2-I1-7xD" firstAttribute="top" secondItem="cG6-sP-flp" secondAttribute="bottom" constant="8" id="JZB-9m-ian"/>
+                            <constraint firstItem="173-9Q-xUp" firstAttribute="leading" secondItem="2ml-Kz-5Gs" secondAttribute="leading" id="Jhq-Ck-lO9"/>
+                            <constraint firstItem="i8i-Bt-grO" firstAttribute="leading" secondItem="173-9Q-xUp" secondAttribute="leading" id="LLo-B1-YIl"/>
+                            <constraint firstItem="PII-2B-qDe" firstAttribute="leading" secondItem="i5o-NW-gQn" secondAttribute="leading" id="MVW-TE-bsx"/>
+                            <constraint firstItem="eD2-I1-7xD" firstAttribute="leading" secondItem="PII-2B-qDe" secondAttribute="leading" id="QZD-qw-qFI"/>
+                            <constraint firstItem="eD2-I1-7xD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-18" id="Qp7-xF-5Qg"/>
+                            <constraint firstItem="cG6-sP-flp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="S0A-at-kq2"/>
+                            <constraint firstItem="i5o-NW-gQn" firstAttribute="trailing" secondItem="iXl-ny-jWl" secondAttribute="trailing" id="Svh-d0-ga7"/>
+                            <constraint firstItem="173-9Q-xUp" firstAttribute="top" secondItem="PII-2B-qDe" secondAttribute="bottom" constant="8" symbolic="YES" id="Txi-MJ-InG"/>
+                            <constraint firstItem="PII-2B-qDe" firstAttribute="top" secondItem="i8i-Bt-grO" secondAttribute="bottom" constant="8" symbolic="YES" id="VFf-Xd-ZCB"/>
+                            <constraint firstItem="cG6-sP-flp" firstAttribute="trailing" secondItem="Jva-aS-xQz" secondAttribute="trailing" id="YIS-pz-IPc"/>
+                            <constraint firstItem="cG6-sP-flp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aoY-jr-oAJ"/>
+                            <constraint firstItem="iXl-ny-jWl" firstAttribute="top" secondItem="Jva-aS-xQz" secondAttribute="bottom" constant="14" id="arx-Pp-4PR"/>
+                            <constraint firstItem="i5o-NW-gQn" firstAttribute="leading" secondItem="iXl-ny-jWl" secondAttribute="leading" id="aub-hw-qj5"/>
+                            <constraint firstItem="PII-2B-qDe" firstAttribute="trailing" secondItem="i5o-NW-gQn" secondAttribute="trailing" id="emx-Pn-arS"/>
+                            <constraint firstItem="iXl-ny-jWl" firstAttribute="leading" secondItem="129-bh-oBd" secondAttribute="leading" constant="-10" id="k7L-Z0-tyV"/>
+                            <constraint firstItem="i8i-Bt-grO" firstAttribute="trailing" secondItem="173-9Q-xUp" secondAttribute="trailing" id="nFq-qE-6qg"/>
+                            <constraint firstItem="i8i-Bt-grO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-8" id="nQY-gQ-MZT"/>
+                            <constraint firstItem="129-bh-oBd" firstAttribute="top" secondItem="bcz-W7-CdX" secondAttribute="bottom" constant="17" id="nb0-P3-6Ph"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PII-2B-qDe" secondAttribute="trailing" constant="58" id="rcP-HI-5fx"/>
+                            <constraint firstAttribute="trailing" secondItem="cG6-sP-flp" secondAttribute="trailing" id="rqO-Ly-SRD"/>
+                            <constraint firstItem="2ml-Kz-5Gs" firstAttribute="top" secondItem="iXl-ny-jWl" secondAttribute="bottom" constant="8" symbolic="YES" id="sfS-4u-JZM"/>
+                            <constraint firstItem="Jva-aS-xQz" firstAttribute="top" secondItem="i5o-NW-gQn" secondAttribute="bottom" constant="8" symbolic="YES" id="uLk-Zg-8Xy"/>
+                            <constraint firstItem="Jva-aS-xQz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-6" id="wHp-93-FNd"/>
+                            <constraint firstItem="i5o-NW-gQn" firstAttribute="top" secondItem="173-9Q-xUp" secondAttribute="bottom" constant="8" symbolic="YES" id="wcB-MX-2LV"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="addressView" destination="i8i-Bt-grO" id="No5-pH-NwM"/>
+                        <outlet property="fullDetails" destination="129-bh-oBd" id="uKi-ut-vLA"/>
+                        <outlet property="latitudeView" destination="173-9Q-xUp" id="2TU-J8-qRT"/>
+                        <outlet property="longitudeView" destination="Jva-aS-xQz" id="C8b-6A-ToE"/>
+                        <outlet property="regionView" destination="2ml-Kz-5Gs" id="9D9-VJ-zqg"/>
+                        <outlet property="searchDisplayController" destination="OLX-02-oXG" id="Kbd-Cm-IR6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="OLX-02-oXG">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="9ja-8i-wtC"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="cFR-UJ-m01"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="EzL-yT-NxZ"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="gUT-Qd-33n"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="105.97826086956522"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="googleSearch" width="32" height="32"/>
+    </resources>
+</document>

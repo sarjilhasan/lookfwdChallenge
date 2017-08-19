@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9EF1089ED09B6A5150DE5F26 /* Pods_LookFwd_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED1BDF5F792F54A81F95B0FC /* Pods_LookFwd_Challenge.framework */; };
+		A39BFFB11F45680A00D35115 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39BFFB01F45680A00D35115 /* AppDelegate.swift */; };
+		A39BFFB61F45680A00D35115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39BFFB41F45680A00D35115 /* Main.storyboard */; };
+		A39BFFB81F45680A00D35115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A39BFFB71F45680A00D35115 /* Assets.xcassets */; };
+		A39BFFBB1F45680A00D35115 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39BFFB91F45680A00D35115 /* LaunchScreen.storyboard */; };
+		A39BFFC21F457ECD00D35115 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39BFFB21F45680A00D35115 /* ViewController.swift */; };
+		A3B73F841F477DAC00CF5249 /* GooglePlacesAutocomplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B73F821F477DAC00CF5249 /* GooglePlacesAutocomplete.swift */; };
+		A3B73F851F477DAC00CF5249 /* GooglePlacesAutocomplete.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3B73F831F477DAC00CF5249 /* GooglePlacesAutocomplete.xib */; };
+		A3B73F8A1F4827FA00CF5249 /* SF Slapstick Comic Shaded.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3B73F891F4827FA00CF5249 /* SF Slapstick Comic Shaded.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A39BFFAD1F45680A00D35115 /* LookFwd Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LookFwd Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A39BFFB01F45680A00D35115 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A39BFFB21F45680A00D35115 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A39BFFB51F45680A00D35115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A39BFFB71F45680A00D35115 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A39BFFBA1F45680A00D35115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A39BFFBC1F45680A00D35115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3B73F821F477DAC00CF5249 /* GooglePlacesAutocomplete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesAutocomplete.swift; sourceTree = "<group>"; };
+		A3B73F831F477DAC00CF5249 /* GooglePlacesAutocomplete.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GooglePlacesAutocomplete.xib; sourceTree = "<group>"; };
+		A3B73F891F4827FA00CF5249 /* SF Slapstick Comic Shaded.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF Slapstick Comic Shaded.ttf"; sourceTree = "<group>"; };
+		CF54914EFCB9A4AD88C58EF0 /* Pods-LookFwd Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LookFwd Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LookFwd Challenge/Pods-LookFwd Challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		ED1BDF5F792F54A81F95B0FC /* Pods_LookFwd_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LookFwd_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F439EF53B8DFF1900E83349E /* Pods-LookFwd Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LookFwd Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-LookFwd Challenge/Pods-LookFwd Challenge.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A39BFFAA1F45680A00D35115 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EF1089ED09B6A5150DE5F26 /* Pods_LookFwd_Challenge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AD4EA45CC2BF1D4E270C5BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED1BDF5F792F54A81F95B0FC /* Pods_LookFwd_Challenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0FC5D3C5EFAB32380A7B80C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF54914EFCB9A4AD88C58EF0 /* Pods-LookFwd Challenge.debug.xcconfig */,
+				F439EF53B8DFF1900E83349E /* Pods-LookFwd Challenge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A39BFFA41F45680A00D35115 = {
+			isa = PBXGroup;
+			children = (
+				A39BFFAF1F45680A00D35115 /* LookFwd Challenge */,
+				A39BFFAE1F45680A00D35115 /* Products */,
+				0FC5D3C5EFAB32380A7B80C6 /* Pods */,
+				0AD4EA45CC2BF1D4E270C5BD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A39BFFAE1F45680A00D35115 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A39BFFAD1F45680A00D35115 /* LookFwd Challenge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A39BFFAF1F45680A00D35115 /* LookFwd Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				A39BFFB01F45680A00D35115 /* AppDelegate.swift */,
+				A39BFFB21F45680A00D35115 /* ViewController.swift */,
+				A39BFFB41F45680A00D35115 /* Main.storyboard */,
+				A39BFFB71F45680A00D35115 /* Assets.xcassets */,
+				A39BFFB91F45680A00D35115 /* LaunchScreen.storyboard */,
+				A39BFFBC1F45680A00D35115 /* Info.plist */,
+				A3B73F821F477DAC00CF5249 /* GooglePlacesAutocomplete.swift */,
+				A3B73F831F477DAC00CF5249 /* GooglePlacesAutocomplete.xib */,
+				A3B73F891F4827FA00CF5249 /* SF Slapstick Comic Shaded.ttf */,
+			);
+			path = "LookFwd Challenge";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A39BFFAC1F45680A00D35115 /* LookFwd Challenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A39BFFBF1F45680A00D35115 /* Build configuration list for PBXNativeTarget "LookFwd Challenge" */;
+			buildPhases = (
+				A8C4DE5028BA2A3C07963393 /* [CP] Check Pods Manifest.lock */,
+				A39BFFA91F45680A00D35115 /* Sources */,
+				A39BFFAA1F45680A00D35115 /* Frameworks */,
+				A39BFFAB1F45680A00D35115 /* Resources */,
+				1187AF7FDC2F87B39F0D8370 /* [CP] Embed Pods Frameworks */,
+				F4BCD1A4266DF90120F1F597 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LookFwd Challenge";
+			productName = "LookFwd Challenge";
+			productReference = A39BFFAD1F45680A00D35115 /* LookFwd Challenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A39BFFA51F45680A00D35115 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Sarjil Hasan";
+				TargetAttributes = {
+					A39BFFAC1F45680A00D35115 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = EKWK628XK3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A39BFFA81F45680A00D35115 /* Build configuration list for PBXProject "LookFwd Challenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A39BFFA41F45680A00D35115;
+			productRefGroup = A39BFFAE1F45680A00D35115 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A39BFFAC1F45680A00D35115 /* LookFwd Challenge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A39BFFAB1F45680A00D35115 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3B73F851F477DAC00CF5249 /* GooglePlacesAutocomplete.xib in Resources */,
+				A39BFFBB1F45680A00D35115 /* LaunchScreen.storyboard in Resources */,
+				A3B73F8A1F4827FA00CF5249 /* SF Slapstick Comic Shaded.ttf in Resources */,
+				A39BFFB81F45680A00D35115 /* Assets.xcassets in Resources */,
+				A39BFFB61F45680A00D35115 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1187AF7FDC2F87B39F0D8370 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LookFwd Challenge/Pods-LookFwd Challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8C4DE5028BA2A3C07963393 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F4BCD1A4266DF90120F1F597 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LookFwd Challenge/Pods-LookFwd Challenge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A39BFFA91F45680A00D35115 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3B73F841F477DAC00CF5249 /* GooglePlacesAutocomplete.swift in Sources */,
+				A39BFFC21F457ECD00D35115 /* ViewController.swift in Sources */,
+				A39BFFB11F45680A00D35115 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A39BFFB41F45680A00D35115 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A39BFFB51F45680A00D35115 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A39BFFB91F45680A00D35115 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A39BFFBA1F45680A00D35115 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A39BFFBD1F45680A00D35115 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A39BFFBE1F45680A00D35115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A39BFFC01F45680A00D35115 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF54914EFCB9A4AD88C58EF0 /* Pods-LookFwd Challenge.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EKWK628XK3;
+				INFOPLIST_FILE = "LookFwd Challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "sarjil.LookFwd-Challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A39BFFC11F45680A00D35115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F439EF53B8DFF1900E83349E /* Pods-LookFwd Challenge.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EKWK628XK3;
+				INFOPLIST_FILE = "LookFwd Challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "sarjil.LookFwd-Challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A39BFFA81F45680A00D35115 /* Build configuration list for PBXProject "LookFwd Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A39BFFBD1F45680A00D35115 /* Debug */,
+				A39BFFBE1F45680A00D35115 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A39BFFBF1F45680A00D35115 /* Build configuration list for PBXNativeTarget "LookFwd Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A39BFFC01F45680A00D35115 /* Debug */,
+				A39BFFC11F45680A00D35115 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A39BFFA51F45680A00D35115 /* Project object */;
+}
