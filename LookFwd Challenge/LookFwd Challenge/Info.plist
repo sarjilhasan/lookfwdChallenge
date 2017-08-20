@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>UIStatusBarStyle</key>
-	<string>light</string>
+	<string>Light Content</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>SF Slapstick Comic Shaded.ttf</string>
