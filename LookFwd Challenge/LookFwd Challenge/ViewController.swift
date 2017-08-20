@@ -40,7 +40,10 @@ class ViewController: UIViewController, GMSPanoramaViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     @IBAction func searchButton(_ sender: Any) {
@@ -49,6 +52,8 @@ class ViewController: UIViewController, GMSPanoramaViewDelegate {
         present(gpaViewController, animated: true, completion: nil)
         //So the StreetView can be updated when another address is choosen.
         self.loadView()
+        
+        
     }
 }
 
@@ -57,7 +62,7 @@ extension ViewController: GooglePlacesAutocompleteDelegate {
         print("Address: ")
         print(place.description + "\n")
         self.addressView.text = place.description
-
+        
         place.getDetails { details in
             self.fullDetails.text = String(describing: details)
             
