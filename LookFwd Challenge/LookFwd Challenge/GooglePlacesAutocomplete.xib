@@ -25,7 +25,7 @@
                 <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="24m-Y8-A7A">
                     <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                     <color key="backgroundColor" red="1" green="0.95812278989999999" blue="0.87430590389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <color key="barTintColor" red="1" green="0.95812278989999999" blue="0.87430590389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="barTintColor" red="0.79600694439999997" green="0.47227647569999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="BdS-J4-gJk"/>
@@ -33,18 +33,18 @@
                 </searchBar>
                 <tableView hidden="YES" autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6Gg-TX-rba">
                     <rect key="frame" x="0.0" y="108" width="375" height="559"/>
-                    <color key="backgroundColor" red="1" green="0.95812278989999999" blue="0.87430590389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <color key="tintColor" red="1" green="0.95812278989999999" blue="0.87430590389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <color key="separatorColor" red="0.90305213730569944" green="0.38078764011349509" blue="0.38699858250305824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <color key="sectionIndexBackgroundColor" red="1" green="0.95812278989999999" blue="0.87430590389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <color key="sectionIndexTrackingBackgroundColor" red="1" green="0.95812278989999999" blue="0.87430590389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" red="0.79600694439999997" green="0.47227647569999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="2Z4-Sz-bQ1"/>
                         <outlet property="delegate" destination="-1" id="Nw9-hn-mXr"/>
                     </connections>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" red="0.99215686274509807" green="0.95686274509803915" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" red="0.99125224351882935" green="0.99634784460067749" blue="0.99172455072402954" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="24m-Y8-A7A" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="0qa-fT-QpK"/>
                 <constraint firstItem="6Gg-TX-rba" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1EL-lI-b3n"/>
@@ -56,6 +56,7 @@
                 <constraint firstItem="6Gg-TX-rba" firstAttribute="top" secondItem="24m-Y8-A7A" secondAttribute="bottom" id="ux4-m9-QrM"/>
                 <constraint firstAttribute="centerX" secondItem="24m-Y8-A7A" secondAttribute="centerX" id="y1i-qG-wtE"/>
             </constraints>
+            <point key="canvasLocation" x="192" y="61"/>
         </view>
     </objects>
 </document>

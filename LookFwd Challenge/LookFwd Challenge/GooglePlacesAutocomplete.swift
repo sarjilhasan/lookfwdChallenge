@@ -337,13 +337,14 @@ extension GooglePlacesAutocompleteContainer: UITableViewDataSource, UITableViewD
         // Configure the cell
         cell.textLabel!.text = place.description
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
-        cell.backgroundColor = UIColor(red:0.99, green:0.96, blue:0.88, alpha:1.0)
+        
         
         return cell
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         gpaService.delegate?.placeSelected?(gpaService.places[(indexPath as NSIndexPath).row])
+
     }
 }
 
