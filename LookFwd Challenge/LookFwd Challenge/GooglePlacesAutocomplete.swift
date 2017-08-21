@@ -11,150 +11,10 @@ import CoreLocation
 
 public let ErrorDomain: String! = "GooglePlacesAutocompleteErrorDomain"
 
-public struct LocationBias {
-    public let latitude: CLLocationDegrees
-    public let longitude: CLLocationDegrees
-    public let radius: CLLocationDistance
-    
-    public init(latitude: Double = 0, longitude: Double = 0, radius: Int = 20000000) {
-        self.latitude = latitude
-        self.longitude = longitude
-        self.radius = Double(radius)
-    }
-    
-    public init(latitude: Double = 0, longitude: Double = 0, radius: CLLocationDistance = 20000000) {
-        self.latitude = latitude
-        self.longitude = longitude
-        self.radius = radius
-    }
-    
-    public init(location:CLLocation, radius: CLLocationDistance = 20000000){
-        self.latitude = location.coordinate.latitude
-        self.longitude = location.coordinate.longitude
-        self.radius = radius
-    }
-    
-    public init(region:CLCircularRegion){
-        self.latitude = region.center.latitude
-        self.longitude = region.center.longitude
-        self.radius = region.radius
-    }
-    
-    public var location: String {
-        return "\(latitude),\(longitude)"
-    }
-}
 
-public enum PlaceType: CustomStringConvertible {
-    case all
-    case geocode
-    case address
-    case establishment
-    case regions
-    case cities
-    
-    public var description : String {
-        switch self {
-        case .all: return ""
-        case .geocode: return "geocode"
-        case .address: return "address"
-        case .establishment: return "establishment"
-        case .regions: return "(regions)"
-        case .cities: return "(cities)"
-        }
-    }
-}
-
-open class Place: NSObject {
-    open let id: String
-    open let desc: String
-    open var apiKey: String?
-    
-    override open var description: String {
-        get { return desc }
-    }
-    
-    public init(id: String, description: String) {
-        self.id = id
-        self.desc = description
-    }
-    
-    public convenience init(prediction: [String: Any], apiKey: String?) {
-        
-        self.init(
-            id: prediction["place_id"] as! String,
-            description: prediction["description"] as! String
-        )
-        
-        self.apiKey = apiKey
-    }
-    
-    /**
-     Call Google Place Details API to get detailed information for this place
-     
-     Requires that Place#apiKey be set
-     
-     - parameter result: Callback on successful completion with detailed place information
-     */
-    open func getDetails(_ result: @escaping (PlaceDetails) -> ()) {
-        GooglePlaceDetailsRequest(place: self).request(result)
-    }
-}
-
-open class PlaceDetails: CustomStringConvertible {
-    open let name: String
-    open let latitude: Double
-    open let longitude: Double
-    
-    open let location: CLLocation
-    
-    open var region: CLCircularRegion
-    
-    open var radius: CLLocationDistance {
-        get {
-            return region.radius
-        }
-    }
-    
-    open let raw: [String: AnyObject]
-    
-    public init(json: [String: AnyObject]) {
-        let result = json["result"] as! [String: AnyObject]
-        let geometry = result["geometry"] as! [String: AnyObject]
-        let location = geometry["location"] as! [String: AnyObject]
-        
-        self.name = result["name"] as! String
-        self.latitude = location["lat"] as! Double
-        self.longitude = location["lng"] as! Double
-        self.location = CLLocation(latitude: self.latitude, longitude: self.longitude)
-        
-        var radius: CLLocationDistance = 10 // default to 10m radius
-        
-        if let viewport = geometry["viewport"] as? [String: AnyObject] {
-            // We are assuming that the place is circular and using the north-east to centre distance to derive the radius
-            let northEastDict = viewport["northeast"] as! [String: AnyObject]
-            let northEast = CLLocation(latitude: northEastDict["lat"] as! Double, longitude: northEastDict["lng"] as! Double)
-            
-            radius = self.location.distance(from: northEast)
-        }
-        
-        
-        self.region = CLCircularRegion(center: self.location.coordinate, radius: radius, identifier: self.name)
-        
-        
-        self.raw = json
-        
-    }
-    
-    open var description: String {
-        return "PlaceDetails: \(name) (\(latitude), \(longitude))"
-    }
-}
-
-@objc public protocol GooglePlacesAutocompleteDelegate {
-    @objc optional func placesFound(_ places: [Place])
-    @objc optional func placeSelected(_ place: Place)
-    @objc optional func placeViewClosed()
+public protocol GooglePlacesAutocompleteDelegate {
+    func placeSelected(_ place: Place)
+    func placeViewClosed()
 }
 
 // MARK: - GooglePlacesAutocompleteService
@@ -205,7 +65,6 @@ open class GooglePlacesAutocompleteService {
                     }
                     
                     completion(self.places, error)
-                    self.delegate?.placesFound?(self.places)
                 } else {
                     completion(nil, error)
                 }
@@ -256,13 +115,13 @@ open class GooglePlacesAutocomplete: UINavigationController {
         
         gpaViewController.navigationItem.leftBarButtonItem = closeButton
         gpaViewController.navigationItem.title = "Enter Address"
-
+        
     }
     
     func close() {
-        placeDelegate?.placeViewClosed?()
+        placeDelegate?.placeViewClosed()
     }
-
+    
     open func reset() {
         gpaViewController.searchBar.text = ""
         gpaViewController.searchBar(gpaViewController.searchBar, textDidChange: "")
@@ -343,8 +202,8 @@ extension GooglePlacesAutocompleteContainer: UITableViewDataSource, UITableViewD
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        gpaService.delegate?.placeSelected?(gpaService.places[(indexPath as NSIndexPath).row])
-
+        gpaService.delegate?.placeSelected(gpaService.places[(indexPath as NSIndexPath).row])
+        
     }
 }
 
@@ -392,7 +251,29 @@ class GooglePlaceDetailsRequest {
             ]
         ) { json, error in
             if let json = json as [String: AnyObject]? {
-                result(PlaceDetails(json: json))
+                let res = json["result"] as! [String: AnyObject]
+                let geometry = res["geometry"] as! [String: AnyObject]
+                let jsonLoc = geometry["location"] as! [String: AnyObject]
+                
+                let name = res["name"] as! String
+                let latitude = jsonLoc["lat"] as! Double
+                let longitude = jsonLoc["lng"] as! Double
+                let location = CLLocation(latitude: latitude, longitude: longitude)
+                
+                var radius: CLLocationDistance = 10 // default to 10m radius
+                
+                if let viewport = geometry["viewport"] as? [String: AnyObject] {
+                    // We are assuming that the place is circular and using the north-east to centre distance to derive the radius
+                    let northEastDict = viewport["northeast"] as! [String: AnyObject]
+                    let northEast = CLLocation(latitude: northEastDict["lat"] as! Double, longitude: northEastDict["lng"] as! Double)
+                    
+                    radius = location.distance(from: northEast)
+                }
+                
+                
+                let region = CLCircularRegion(center: location.coordinate, radius: radius, identifier: name)
+                
+                result(PlaceDetails(name: name, latitude: latitude, longitude: longitude, location: location, region: region))
             }
             if let error = error {
                 // TODO: We should probably pass back details of the error
@@ -424,10 +305,8 @@ class GooglePlacesRequestHelpers {
     }
     
     fileprivate class func escape(_ string: String) -> String {
-        let legalURLCharactersToBeEscaped: CFString = ":/?&=;+!@#$()',*" as CFString
-        return CFURLCreateStringByAddingPercentEscapes(nil, string as CFString!, nil, legalURLCharactersToBeEscaped, CFStringBuiltInEncodings.UTF8.rawValue)! as String
-        
-            
+        let legalURLCharactersToBeEscaped: NSCharacterSet = NSCharacterSet(charactersIn: ":/?&=;+!@#$()',*")
+        return NSString(string: string).addingPercentEncoding(withAllowedCharacters: legalURLCharactersToBeEscaped as CharacterSet)! as String
     }
     
     fileprivate class func doRequest(_ url: String, params: [String: String], completion: @escaping (JSON?,Error?) -> ()) {
@@ -497,10 +376,6 @@ class GooglePlacesRequestHelpers {
                 return
             }
         }
-        
-        
-        
-        done(json as? [String:Any],nil)
-        
+        done(json as? [String:Any], nil)
     }
 }

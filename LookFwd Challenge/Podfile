@@ -7,5 +7,4 @@ target 'LookFwd Challenge' do
 
   # Pods for LookFwd Challenge
   pod 'GoogleMaps'
-  pod 'GooglePlaces'
 end

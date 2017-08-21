@@ -103,7 +103,6 @@ extension ViewController: GooglePlacesAutocompleteDelegate {
     }
     
     func placeViewClosed() {
-        
         dismiss(animated: true, completion: nil)
     }
 }

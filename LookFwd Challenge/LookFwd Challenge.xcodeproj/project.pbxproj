@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		9EF1089ED09B6A5150DE5F26 /* Pods_LookFwd_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED1BDF5F792F54A81F95B0FC /* Pods_LookFwd_Challenge.framework */; };
+		A30D3E401F4B78B60065CD61 /* LocationBias.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30D3E3F1F4B78B60065CD61 /* LocationBias.swift */; };
+		A30D3E421F4B78FA0065CD61 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30D3E411F4B78FA0065CD61 /* Place.swift */; };
+		A30D3E441F4B793C0065CD61 /* PlaceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30D3E431F4B793C0065CD61 /* PlaceDetails.swift */; };
+		A30D3E461F4B797D0065CD61 /* PlaceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30D3E451F4B797D0065CD61 /* PlaceType.swift */; };
 		A39BFFB11F45680A00D35115 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39BFFB01F45680A00D35115 /* AppDelegate.swift */; };
 		A39BFFB61F45680A00D35115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39BFFB41F45680A00D35115 /* Main.storyboard */; };
 		A39BFFB81F45680A00D35115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A39BFFB71F45680A00D35115 /* Assets.xcassets */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A30D3E3F1F4B78B60065CD61 /* LocationBias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationBias.swift; sourceTree = "<group>"; };
+		A30D3E411F4B78FA0065CD61 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		A30D3E431F4B793C0065CD61 /* PlaceDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetails.swift; sourceTree = "<group>"; };
+		A30D3E451F4B797D0065CD61 /* PlaceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceType.swift; sourceTree = "<group>"; };
 		A39BFFAD1F45680A00D35115 /* LookFwd Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LookFwd Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39BFFB01F45680A00D35115 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39BFFB21F45680A00D35115 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +71,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A30D3E3E1F4B78800065CD61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A30D3E3F1F4B78B60065CD61 /* LocationBias.swift */,
+				A30D3E411F4B78FA0065CD61 /* Place.swift */,
+				A30D3E431F4B793C0065CD61 /* PlaceDetails.swift */,
+				A30D3E451F4B797D0065CD61 /* PlaceType.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		A39BFFA41F45680A00D35115 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +103,7 @@
 		A39BFFAF1F45680A00D35115 /* LookFwd Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				A30D3E3E1F4B78800065CD61 /* Model */,
 				A39BFFB01F45680A00D35115 /* AppDelegate.swift */,
 				A39BFFB21F45680A00D35115 /* ViewController.swift */,
 				A39BFFB41F45680A00D35115 /* Main.storyboard */,
@@ -223,9 +243,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A30D3E441F4B793C0065CD61 /* PlaceDetails.swift in Sources */,
+				A30D3E461F4B797D0065CD61 /* PlaceType.swift in Sources */,
 				A3B73F841F477DAC00CF5249 /* GooglePlacesAutocomplete.swift in Sources */,
+				A30D3E401F4B78B60065CD61 /* LocationBias.swift in Sources */,
 				A39BFFC21F457ECD00D35115 /* ViewController.swift in Sources */,
 				A39BFFB11F45680A00D35115 /* AppDelegate.swift in Sources */,
+				A30D3E421F4B78FA0065CD61 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
